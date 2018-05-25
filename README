@@ -1,0 +1,11 @@
+Run with "node bot.js"
+
+A Discord bot that searches Danbooru for hentai.
+
+Need to create a new auth.json file that contains
+
+{
+    "token": ""
+}
+
+Fill the token string with the login token for the bot from Discord.

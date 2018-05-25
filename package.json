@@ -1,0 +1,11 @@
+{
+    "name": "Rider of Bot",
+    "version": "0.1.0",
+    "description": "Searches Danbooru for hentai.",
+    "main": "bot.js",
+    "author": "Appendices",
+    "dependencies": {
+        "discord.js": "^11.3.2",
+        "tinyreq": "^3.4.0"
+    }
+}
