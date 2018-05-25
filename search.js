@@ -23,7 +23,12 @@ module.exports = {
                             //Using known strings in html to find image direct links
                             var posts = body.indexOf("<div style=\"overflow: hidden;\">");
                             var articles = body.substring(posts, body.substring(posts).indexOf("</div>") + posts).split("<article");
+                            if(articles.length < 2){
+                                reject("Empty search.");
+                                return; //kills search
+                            }
                             var article = (Math.random() * (articles.length - 1) | 0) + 1;
+                            console.log(articles.length);
                             article = articles[article];
                             var imgurl = article.substring(article.indexOf("data-file-url=") + 15);
                             imgurl = imgurl.substring(0, imgurl.indexOf("\""));
