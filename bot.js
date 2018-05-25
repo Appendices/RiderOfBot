@@ -12,7 +12,7 @@ function menu(){
                 "**~succ**\t|\tSucks your dick and calls you gay\n" +
                 "**~TRS**\t|\tThe Redstone Scientist\n" +
                 "**~lewd**\t[tag]\t|\tLewd search\n" +
-                "**~safe**\t[tag]\t|\tSafe seach\n";
+                "**~safe**\t[tag]\t|\tSafe seach\n" +
                 "**~search**\t[tag] [tag]\t|\tAny search\n";
     return menu;
 }
