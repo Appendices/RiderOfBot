@@ -1,3 +1,5 @@
+///Rider of Bot Discord bot for SmokedCheese
+
 const Discord = require("discord.js");
 const auth = require("./auth.json");
 const search = require("./search.js");
@@ -35,7 +37,10 @@ bot.on("message", message => {
                 }
                 search.danbooru(tag)
                     .then(imgurl => message.channel.send(imgurl))
-                    .catch(err => console.error(err));
+                    .catch(err => {
+                        console.error(err);
+                        message.channel.send("I don't feel so good, Mastah.");
+                    });
                 break;
             //Add more commands here
         }
