@@ -16,7 +16,7 @@ module.exports = {
                     var pages = body.substring(paginator + greaterthan + 1, pages);
                     //Select random page and construct new URL
                     url = "https://danbooru.donmai.us/posts?page=" + (Math.random() * pages | 0 + 1) + "&tags=" + tag;
-    
+                    console.log("pages: " + pages + " | " + url);
                     request(url, (err, body) => {
                         if(err) reject(err);
                         else{
@@ -31,6 +31,7 @@ module.exports = {
                             article = articles[article];
                             var imgurl = article.substring(article.indexOf("data-file-url=") + 15);
                             imgurl = imgurl.substring(0, imgurl.indexOf("\""));
+                            console.log("images " + (articles - 1) + " | " + imgurl);
                             resolve(imgurl);
                         }
                     });

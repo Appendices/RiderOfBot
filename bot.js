@@ -9,7 +9,8 @@ const bot = new Discord.Client();
 
 //Script started
 bot.on("ready", () => {
-    console.log("Logged in as: " + bot.user.username + " | " + bot.user.id);
+    console.log("Logged in to: " + bot.guilds);
+    console.log("as: " + bot.user.username + " | " + bot.user.id);
 });
 
 //Message response commands
@@ -21,14 +22,18 @@ bot.on("message", message => {
         switch(args[0].toLowerCase()){
             case "help": //~help
                 message.channel.send("~succ\n" + 
-                                    "~search [tag]\n"+
-                                    "~TRS");
+                                    "~TRS\n" +
+                                    "~search [tag]"
+                                    );
                 break;
             case "succ": //~succ
                 message.channel.send("*succ* *succ* You gay.");
                 break;
             case "trs": //~TRS
                 message.channel.send("https://cdn.discordapp.com/attachments/317414323226017796/418452262751305729/trs.jpg");
+                break;
+            case "trs?": //~TRS?
+                message.channel.send("https://locker.ifttt.com/v2/12046472/1524033255062-e35a12156bb07745/478242495-hqoa6ui.jpg?sharing_key=b62df0377d751df02f73502e3d4cc9b5");
                 break;
             case "search": //~search [tag]
                 if(args.length < 2){
