@@ -9,7 +9,7 @@ const bot = new Discord.Client();
 
 //Script started
 bot.on("ready", () => {
-    console.log("Logged in to: " + bot.guilds);
+    console.log("Logged in to: " + bot.guilds.array());
     console.log("as: " + bot.user.username + " | " + bot.user.id);
 });
 
