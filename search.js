@@ -28,7 +28,6 @@ module.exports = {
                                 return; //kills search
                             }
                             var article = (Math.random() * (articles.length - 1) | 0) + 1;
-                            console.log(articles.length);
                             article = articles[article];
                             var imgurl = article.substring(article.indexOf("data-file-url=") + 15);
                             imgurl = imgurl.substring(0, imgurl.indexOf("\""));

@@ -18,13 +18,17 @@ bot.on("message", message => {
     if(message.content.substring(0, 1) == "~"){
         var args = message.content.substring(1).split(" ");
 
-        switch(args[0]){
+        switch(args[0].toLowerCase()){
             case "help": //~help
                 message.channel.send("~succ\n" + 
-                                    "~search [tag]\n");
+                                    "~search [tag]\n"+
+                                    "~TRS");
                 break;
             case "succ": //~succ
                 message.channel.send("*succ* *succ* You gay.");
+                break;
+            case "trs": //~TRS
+                message.channel.send("https://cdn.discordapp.com/attachments/317414323226017796/418452262751305729/trs.jpg");
                 break;
             case "search": //~search [tag]
                 if(args.length < 2){
